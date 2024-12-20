@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/styles.css">
+<title>株式会社Well Design.</title>
+<style>
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    
+    body {
+        color: #333;
+        background: #fff;
+    }
+    
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    header .logo {
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+    }
+    
+    header nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #333;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+    }
+    
+    header nav a:hover {
+        color: #b3985f; /* ゴールド系のアクセントカラー */
+    }
+    
+    /* Hero Section */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        padding: 0 20px;
+        background: #fff/*#f9f9f9;*/
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+    .hero p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin-bottom: 40px;
+        line-height: 1.8;
+    }
+    .hero a.btn-primary {
+        display: inline-block;
+        padding: 10px 30px;
+        border: 1px solid #b3985f;
+        color: #b3985f;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        letter-spacing: 0.05em;
+    }
+    .hero a.btn-primary:hover {
+        background: #b3985f;
+        color: #fff;
+    }
+    
+    /* About Section */
+    .about {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+    }
+    .about .text {
+        flex: 1 1 500px;
+    }
+    .about .text h2 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    .about .text p {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+    .about .image {
+        flex: 1 1 500px;
+    }
+    .about .image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: 1px solid  #eee;
+    }
+    
+    /* Services Section */
+    .services {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #fff
+    }
+    .services h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 60px;
+    }
+    .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+    .service-item {
+        flex: 1 1 300px;
+        max-width: 300px;
+        text-align: center;
+    }
+    .service-item h3 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    .service-item p {
+        font-size: 0.9rem;
+        line-height: 1.8;
+        color: #555;
+    }
+    
+    /* Contact Section */
+    .contact {
+        background: #fff;
+        padding: 80px 20px;
+        text-align: center;
+    }
+    .contact h2 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+    .contact p {
+        font-size: 1rem;
+        line-height: 1.8;
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+    }
+    .contact a.btn-primary {
+        display: inline-block;
+        padding: 10px 30px;
+        border: 1px solid #b3985f;
+        color: #b3985f;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        letter-spacing: 0.05em;
+    }
+    .contact a.btn-primary:hover {
+        background: #b3985f;
+        color: #fff;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid #eee;
+        font-size: 0.8rem;
+    }
+    
+    footer .social-links a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem;
+    }
+    footer .social-links a:hover {
+        color: #b3985f;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+        
+        .hero p {
+            font-size: 1rem;
+        }
+
+        .about {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">株式会社Well Design.</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>「唯一無二」の存在<br>ブランドをさらなる高みへ</h1>
+            <p>当社は、ブランドデザインを専門とする経営コンサルティングファームです。
+                ブランド価値を高めるためのマーケティング戦略・組織変革・事業開発など、
+                あらゆる領域において最適なソリューションを提供いたします。
+            </p>
+
+            <a href="#contact" class="btn-primary">お問い合わせ</a>
+        </div>
+        <div class="hero-image">
+            <img src="image/image2.png" alt="ブランドロゴ">
+        </div>
+    </div>
+
+
+</section>
+
+
+<section id="services" class="services">
+
+    <h2>Service List
+        <br>Client Success Stories</h2>
+    <div class="service-list">
+        <div class="service-item">
+            <h3>Brand Design.</h3>
+            <p>圧倒的な存在感を生み出すブランドデザインを提案し、
+            価値創造を支援します。</p>
+        </div>
+        <div class="service-item">
+            <h3>Strategy Design.</h3>
+            <p>確率論を活用したカスタマーズ・リサーチでブランドの独占的な競争優位を確立します。
+            </p>
+        </div>
+        <div class="service-item">
+            <h3>Management Design.</h3>
+            <p>マネジメント理論を学習し、実行力の高い組織を作り出します。
+            </p>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+<section id="about" class="about">
+
+    <div class="text">
+        <h2>Brand Design.</h2>
+        <p>（株）中徳総本店は、1964年に創業された果物商が祖業です。「医食同源」の考えを大切にされていて健康に良い食品を提供してきました。
+            コーヒースタンドを作りたいというクライアントの思いをデジタルトランスフォーメーションした『COFFEE ROBOT』をデザインしました。
+        コーヒースタンドのドリップコーヒーに匹敵する味わいをリーズナブルな価格で提供しています。</p>    
+            
+        
+        <p>カップ式自動販売機はサービスエリアなどで展開されていていますが、コーヒー以外にも様々なドリンクを提供しています。『COFFEE ROBOT』ではあえて、コーヒー2種類に限定して
+            コーヒー好きの人にターゲットを絞っています。コンビニコーヒーと差別化するためにクライアントが自家焙煎した豆をグレードの高い高級豆を焼きたて・挽き立てで提供しています。黒で統一感を出して高級感のあるデザインにしました。
+            オーバーツーリズム・人手不足・インフレの時代にうまくマッチしたサービスとして注目されています。</p>
+            
+        <p>京都の錦市場に設置されているのでお近くをお立ちよりの際には飲んでみてください。インバウンド客がメインターゲットでありながらも、地元の人からも愛される
+            「HIGH QUALITY ＆ LOW PRICE」を実現しています。
+        </p>
+    </div>
+    <div class="image">
+        <!-- 実際のプロジェクトでは適切な高級感あるイメージ写真を使用 -->
+        <img src="image/image3.jpg" alt="Well Design Office">
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="text">
+        <h2>Strategy Design.</h2>
+        <p>『COFFEE ROBOT』のポスターデザインを行いました。ブルーマウンテンの2倍ほど高価なゲイシャと呼ばれる最高級豆を京都の「芸者」にかけてポスターをデザインしています。
+            ゲイシャは喫茶店では2,000円をくだらない金額で販売されていますが、『COFFEE ROBOT』では680円で販売しました。海外ではブルーマウンテンよりもゲイシャの方が認知されており、
+            京都の錦市場というインバウンド客が多い地域ですから、通行人の目に留まり、自然に集客に繋がりました。</p>
+
+        <p>ブランド価値を高めるためには、自社のコアバリューと顧客価値を結びつけるデザインが必要です。
+            instagram、facebook、XなどのSNSを使った広告やチラシ配布などの伝統的な手法も活用します。
+            『COFFEE ROBOT』の場合、高級豆を「HIGH QUALITY ＆ LOW PRICE」で販売するという特性上、
+            しっかりと自家焙煎している様子や本物の豆を使っていることを発信しないとブランド力向上には繋がりません。
+
+            トータルでマーケティングをして顧客とのリレーション強化をはかっていけることが強みです。</p>
+
+        <p>ブランド力を高めるためには、数学を用いた確率論で考えることが重要です。独創性のあるブランドポジションを
+            確立できたとしても、そのブランドを支持するカスタマーの数を十分に計算したうえでポジションを取ります。
+        </p>
+
+        <p>また、プロモーション領域では、SNSをロボットで運用する技術『SNS ROBOT』も開発して、人手をかけない
+            自動化されたマーケティング手法を導入しています。少人数チームで大きなビジネス成長を狙えます。実際に
+            『COFFEE ROBOT』では、ブランド力を生かして通信販売事業にも進出しています。
+        </p>
+    </div>
+    <div class="image">
+        <!-- 実際のプロジェクトでは適切な高級感あるイメージ写真を使用 -->
+        <img src="image/image4.jpg" alt="ゲイシャ">
+    </div>
+</section>
+
+
+<section id="about" class="about">
+    <div class="text">
+        <h2>Management Design.</h2>
+        <p>組織の生産性を飛躍的に向上させるために、生成AIツール『中徳GPT』を開発しました。ChatGPT、Gemini、Claudeなど複数のLLMから同時に情報出力できます。
+            インターネットを使った最新のニュースの検索も可能です。
+            また、会議議事録や商品説明情報など社内データーを読み込んで自社の情報をハルシネーション無しで出力することも可能です。今後はバージョンアップしていき、様々な社内システムとの統合を行います。</p>
+        <p>事業をスムーズに承継するためには、社内のナレッジを蓄積することが重要です。中徳GPTを使えば、社内データーベースを構築して、様々な情報に簡単にアクセスできるようになります。</p>
+    </div>
+    <div class="image">
+        <!-- 実際のプロジェクトでは適切な高級感あるイメージ写真を使用 -->
+        <img src="image/nakatokuGPT.png" alt="中徳GPTGPT">
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="text">
+        <h2>会社概要</h2>
+
+        <p>会社名
+            <br>株式会社Well Design.</p>
+        <p>事業内容
+            <br>経営コンサルティング・人事コンサルティング・食品コンサルティング</p>
+        <p>所在地
+            <br>京都市中京区寺町通錦小路下る大文字町290番地</p>
+        <p>代表取締役
+            <br>中村　崇延</p>
+
+       
+    </div>
+    <div class="image">
+        <!-- 実際のプロジェクトでは適切な高級感あるイメージ写真を使用 -->
+        <img src="image/image1.webp" alt="Well Design Office">
+    </div>
+</section>
+
+
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>ご質問やご依頼など、お気軽にお問い合わせください。  
+    私たちは常に新たな挑戦を歓迎し、ブランドの可能性を最大限に引き出すための  
+    パートナーとして、あなたと共に歩み続けます。</p>
+    <a href="mailto:t.nakamura1901@gmail.com?subject=お問い合わせ&body=以下にご記入ください。" class="btn-primary">お問い合わせ</a>
+</section>
+
+<footer>
+    <p>© 2024 株式会社Well Design. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
